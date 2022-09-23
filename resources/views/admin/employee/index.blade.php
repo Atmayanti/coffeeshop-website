@@ -37,9 +37,10 @@
                                     <th>Name</th>
                                     <th>Action</th>
                                 </tr>
+                                
                             </thead>
                             <tbody>
-                                @foreach ($paginate as $employee)
+                                @forelse ($paginate as $employee)
                                 <tr>
                                     <td>{{ $employee ->id }}</td>
                                     <td>{{ $employee ->user_id }}</td>
@@ -55,7 +56,9 @@
                                         </form>                                    
                                     </td>
                                 </tr>
-                                @endforeach
+                                @empty
+                                <tr>Tidak ada data</tr>
+                                @endforelse
                             </tbody>
                         </table>
                     </div>
