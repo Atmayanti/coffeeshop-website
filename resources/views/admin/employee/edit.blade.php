@@ -35,17 +35,17 @@
                             </div>
                             <div class="form-group">
                                 <label for="name">Name</label>
-                                <input type="text" name="name" class="form-control" id="name"
+                                <input type="text" data-id="field-name" name="name" class="form-control" id="name"
                                     value="{{ $employee->user->name }}" aria-describedby="name">
                             </div>
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="email" name="email" class="form-control" id="email"
+                                <input type="email" data-id="field-email" name="email" class="form-control" id="email"
                                     value="{{ $employee->user->email }}" aria-describedby="email">
                             </div>
                             <div class="form-group">
                                 <label for="role_id">Role</label>
-                                <select name="role_id" class="form-control">
+                                <select name="role_id" data-id="field-role" class="form-control">
                                     @if ($employee->user->role_id === 2)
                                     <option selected value="2">Kasir</option>
                                     <option value="3">Staff Dapur</option>
@@ -57,22 +57,22 @@
                             </div>
                             <div class="form-group">
                                 <label for="date_of_birth">Date of Birth</label>
-                                <input type="date" name="date_of_birth" class="form-control" id="date_of_birth" value="{{ $employee->date_of_birth }}"
+                                <input type="date" data-id="field-birth-date" name="date_of_birth" class="form-control" id="date_of_birth" value="{{ $employee->date_of_birth }}"
                                     aria-describedby="date_of_birth">
                             </div>
                             <div class="form-group">
                                 <label for="address">Address</label>
-                                <input type="text" name="address" class="form-control" id="address" value="{{ $employee->address }}"
+                                <input type="text" data-id="field-address" name="address" class="form-control" id="address" value="{{ $employee->address }}"
                                     aria-describedby="address">
                             </div>
                             <div class="form-group">
                                 <label for="phone">Phone</label>
-                                <input type="text" name="phone" class="form-control" id="phone" value="{{ $employee->phone }}"
+                                <input type="text" data-id="field-phone" name="phone" class="form-control" id="phone" value="{{ $employee->phone }}"
                                     aria-describedby="phone">
                             </div>
                             <div class="form-group">
                                 <label for="gender">Gender</label>
-                                <select name="sex" class="form-control">
+                                <select data-id="field-gender" name="sex" class="form-control">
                                     @if ($employee->sex === 'M')
                                     <option selected value="M">Male</option>
                                     <option value="F">Female</option>
@@ -82,7 +82,7 @@
                                     @endif
                                 </select>
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" data-id="btn-submit" class="btn btn-primary">Submit</button>
                         </form>
                     </div>
                 </div>

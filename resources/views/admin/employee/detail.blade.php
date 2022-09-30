@@ -10,13 +10,13 @@
             <div class="col-lg-12 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-header">
-                        <a style="text-decoration: none;" class="text-dark"
+                        <a data-id="title" style="text-decoration: none;" class="text-dark"
                             href="{{ route('employee.index') }}">Employee / </a>
-                        <a style="text-decoration: none;" class="text-dark font-weight-bold" href="#">Detail
+                        <a data-id="subtitle" style="text-decoration: none;" class="text-dark font-weight-bold" href="#">Detail
                             Employee</a>
                     </div>
                     <div class="card-body">
-                        <table class="table table-striped table-hover">
+                        <table data-id="tbl-show-employee" class="table table-striped table-hover">
                             <tr>
                                 <th>Employee ID</th>
                                 <td>{{$employee->id}}</td>
@@ -66,7 +66,7 @@
                                 </td>
                             </tr>
                         </table>
-                        <a class="btn btn-success mt-3" href="{{ route('employee.index') }}">Back</a>
+                        <a data-id="btn-back" class="btn btn-success mt-3" href="{{ route('employee.index') }}">Back</a>
                     </div>
                 </div>
             </div>

@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
         $users = [
             [
                 'id' => 1,
-                'name' => 'Taufik Admin',
+                'name' => 'Atmayanti Admin',
                 'email' => 'admin@mail.com',
                 'password' => Hash::make('12345678'),
                 'email_verified_at' => date('Y/m/d h:i:s'),
@@ -27,7 +27,7 @@ class UserSeeder extends Seeder
             ],
             [
                 'id' => 2,
-                'name' => 'Taufik Kasir',
+                'name' => 'Atmayanti Kasir',
                 'email' => 'kasir@mail.com',
                 'password' => Hash::make('12345678'),
                 'email_verified_at' => date('Y/m/d h:i:s'),

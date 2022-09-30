@@ -14,11 +14,11 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="float-right my-2 mb-4">
-                            <a class="btn btn-success" href="{{ route('employee.create') }}"> Input Employee</a>
+                            <a class="btn btn-success" data-id="btn-input" href="{{ route('employee.create') }}"> Input Employee</a>
                         </div>
 
                         @if ($message = Session::get('success'))
-                        <div class="alert alert-success">
+                        <div data-id="success-message" class="alert alert-success">
                             <p>{{ $message }}</p>
                         </div>
                         @endif
@@ -47,12 +47,12 @@
                                     <td>{{ $employee ->user->role->role_name }}</td>
                                     <td>{{ $employee ->user->name }}</td>
                                     <td class="d-flex">
-                                        <a class="btn btn-info  mx-1" href="{{ route('employee.show',$employee->id) }}">Detail</a>
-                                        <a class="btn btn-primary  mx-1" href="{{ route('employee.edit',$employee->id) }}">Edit</a>
-                                        <form action="{{ route('employee.destroy',$employee->id) }}" method="POST">
+                                        <a data-id="btn-read" class="btn btn-info  mx-1" href="{{ route('employee.show',$employee->id) }}">Detail</a>
+                                        <a data-id="btn-update" class="btn btn-primary  mx-1" data-id="btn-update" href="{{ route('employee.edit',$employee->id) }}">Edit</a>
+                                        <form data-id="btn-del" action="{{ route('employee.destroy',$employee->id) }}" method="POST">
                                             @method('delete')
                                             @csrf
-                                            <button class="btn btn-danger  mx-1" onclick="return confirm('Are you sure want to delete this employee?')">Delete</button>
+                                            <button data-id="popup-del" class="btn btn-danger  mx-1" onclick="return confirm('Are you sure want to delete this employee?')">Delete</button>
                                         </form>                                    
                                     </td>
                                 </tr>

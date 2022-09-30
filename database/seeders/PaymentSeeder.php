@@ -16,7 +16,7 @@ class PaymentSeeder extends Seeder
     {
         $payments = [
             'order_id' => 1,
-            'employee_id' => 2,
+            'employee_id' => 1,
             'payment'=> 100000,
             'change' => 40000, 
         ];
