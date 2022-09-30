@@ -7,7 +7,7 @@
 <div class="main-panel">
     <div class="content-wrapper">
         <div class="page-header">
-            <h3 class="page-title"> Employees Table </h3>
+            <h3 class="page-title" data-id="title-emp"> Employees Table </h3>
         </div>
         <div class="row">
             <div class="col-lg-12 grid-margin stretch-card">
@@ -28,7 +28,7 @@
                         </div>
                         @endif
 
-                        <table class="table table-striped table-hover">
+                        <table class="table table-striped table-hover" data-id="tbl-employee">
                             <thead>
                                 <tr>
                                     <th>Employee Id</th>
@@ -62,7 +62,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="btn">
+                    <div class="btn" data-id="btn-input-employee">
                         {{ $paginate->links('vendor.pagination.bootstrap-4') }}
                     </div>
                 </div>
